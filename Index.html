@@ -11,13 +11,14 @@
 <body>
     <form>
         <h1>Pocitac tlaku 3000</h1>
-        <p>Síla [N]</p>
+        <label id="Neco" name="Chuj">Síla [N]</label>
         <input id="F" type="number">
-        <p>Plocha [m^2]</p>
+        <label id="Neco" name="Chuj2">Plocha [m^2]</label>
         <input id="S" type="number">
-        <p>Tlak [Pa]</p>
-        <input id="P" type="number">
-        <input type="button" value="Vypocitej" onclick="Vypocitej()" >
+        <label id="Neco" name="Chuj3">Tlak [Pa]</label>
+        <input id="P" type="number"> <br>
+        <button onclick="Vypocitej()">Vypocitej</button> <br>
+        <label hidden="true" id="error" name="errorrrr">Error invalid input</label>
     </form>
 </body>
 </html>

@@ -11,11 +11,39 @@ if ('serviceWorker' in navigator) {
 }
 
 function Vypocitej() {
-    const F = document.getElementById("F").value;
-    const S = document.getElementById("S").value;
-    const P = document.getElementById("P").value;
+    event.preventDefault();
+    document.getElementById("error").hidden = true;
+    try {
+        let F = document.getElementById("F").value;
+    let S = document.getElementById("S").value;
+    let P = document.getElementById("P").value;
     let res;
-    res = F/S;
-    P = res;
-    console.log(res);
+    console.log(F);
+    console.log(S);
+    console.log(P);
+    if (F == "" && S == "" || F == "" && P == "" || S == "" && P == "") {
+        document.getElementById("error").hidden = false;
+    }
+
+    if (F == "") {
+        res = P*S;
+        document.getElementById("F").value = res;
+    }
+    else if (S == "")
+    {
+        res = F/P;
+        document.getElementById("S").value = res;
+    }
+    else
+    {
+        
+        res = F/S;
+        document.getElementById("P").value = res;
+    }
+
+    } catch (error) {
+        document.getElementById("error").hidden = false;
+    }
+    
+    
 }
