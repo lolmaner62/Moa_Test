@@ -46,8 +46,8 @@ function Vypocitej() {
     }
     else
     {
-        if (S == 0) {
-            document.getElementById("error").textContent = "Nesmíš dělit nulou"
+        if (S == 0 || S <= 0) {
+            document.getElementById("error").textContent = "Nesmíš dělit nulou nebo plocha nesmí být v mínusu"
             document.getElementById("error").hidden = false;
         }
         else
