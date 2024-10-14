@@ -13,6 +13,7 @@ if ('serviceWorker' in navigator) {
 function Vypocitej() {
     event.preventDefault();
     document.getElementById("error").hidden = true;
+    document.getElementById("error").textContent = "Error invalid input"
     try {
         let F = document.getElementById("F").value;
     let S = document.getElementById("S").value;
@@ -32,14 +33,29 @@ function Vypocitej() {
     }
     else if (S == "")
     {
-        res = F/P;
-        document.getElementById("S").value = res;
+        if (P == 0) {
+            document.getElementById("error").textContent = "Nesmíš dělit nulou"
+            document.getElementById("error").hidden = false;
+        }
+        else
+        {
+            res = F/P;
+            document.getElementById("S").text = res;
+        }
+        
     }
     else
     {
+        if (S == 0) {
+            document.getElementById("error").textContent = "Nesmíš dělit nulou"
+            document.getElementById("error").hidden = false;
+        }
+        else
+        {
+            res = F/S;
+            document.getElementById("P").value = res;
+        }
         
-        res = F/S;
-        document.getElementById("P").value = res;
     }
 
     } catch (error) {
