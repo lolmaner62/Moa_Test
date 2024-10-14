@@ -23,6 +23,7 @@ function Vypocitej() {
     console.log(P);
     if (F == "" && S == "" || F == "" && P == "" || S == "" && P == "") {
         document.getElementById("error").hidden = false;
+        return;
     }
 
     if (F == "") {
