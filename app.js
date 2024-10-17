@@ -40,7 +40,7 @@ function Vypocitej() {
         else
         {
             res = F/P;
-            document.getElementById("S").text = res;
+            document.getElementById("S").value = res;
         }
         
     }
