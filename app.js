@@ -22,6 +22,11 @@ function Vypocitej() {
     console.log(F);
     console.log(S);
     console.log(P);
+    if (F != "" && S != "" && P != "") {
+            document.getElementById("error").textContent = "Nesmí být zadány všechny hodnoty"
+            document.getElementById("error").hidden = false;
+            return;
+    }
     if (F == "" && S == "" || F == "" && P == "" || S == "" && P == "") {
         document.getElementById("error").hidden = false;
         return;
